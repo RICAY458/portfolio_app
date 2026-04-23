@@ -47,12 +47,12 @@ st.subheader(" Certificates")
 
 # 1. Define your data (You can replace the URLs with your local image paths)
 skills_data = [
-    {"name": "Python Programming in Cisco Networking Academy", "img": "assets/Python.png"},
-    {"name": "Python Programming in Simple Learn", "img": "assets/python1.png"},
+    {"name": "Python Programming in Cisco Networking Academy", "img": "/Python.png"},
+    {"name": "Python Programming in Simple Learn", "img": "python1.png"},
     {"name": "java", "img": "assets/java.png"},
-    {"name": "UI/UX Design", "img": "assets/ui_ux.jpeg"},
-    {"name": "Cybersecurity", "img": "assets/cyber.jpg"},
-    {"name": "Android", "img": "assets/android.png"},
+    {"name": "UI/UX Design", "img": "ui_ux.jpeg"},
+    {"name": "Cybersecurity", "img": "cyber.jpg"},
+    {"name": "Android", "img": "android.png"},
 ]
 
 # 3. Create the 3-column grid
