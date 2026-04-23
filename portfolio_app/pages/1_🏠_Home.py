@@ -1,4 +1,9 @@
 import streamlit as st
+import os
+# This will show you exactly where Streamlit is looking
+st.write("Current folder content:", os.listdir("."))
+if os.path.exists("assets"):
+    st.write("Assets folder content:", os.listdir("assets"))
 
 
 st.markdown("""
