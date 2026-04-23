@@ -23,9 +23,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ---------- IMAGE PATH (UPDATED) ----------
+# ---------- PATH SETUP ----------
 BASE_DIR = os.path.dirname(__file__)
 image_path = os.path.join(BASE_DIR, "assets", "MYID2.png")
+
+# ---------- DEBUG (you can remove later) ----------
+st.write("Looking for image at:", image_path)
 
 # ---------- HEADER ----------
 st.title("✨ My Portfolio ✨")
@@ -34,7 +37,14 @@ st.subheader("Future Developer")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image(image_path, use_container_width=True)
+    try:
+        if os.path.exists(image_path):
+            st.image(image_path, use_container_width=True)
+        else:
+            st.warning("⚠️ Image not found. Check file path or GitHub upload.")
+    except Exception as e:
+        st.error("Error loading image")
+        st.text(str(e))
 
 with col2:
     st.markdown("""
@@ -61,4 +71,4 @@ with col3:
     st.markdown('<div class="card">💻 <b>Projects</b><br>Explore my work</div>', unsafe_allow_html=True)
 
 with col4:
-    st.markdown('<div class="card">📩 <b>Contact</b><br>Reach me easily</div>', unsafe_allow_html=True)
+    st.markdown('<div class="card">📩 <b>Contact</b><br>Reach me easily</div>', unsafe_allow_html=True)"card">📩 <b>Contact</b><br>Reach me easily</div>', unsafe_allow_html=True)
